@@ -28,3 +28,12 @@ title: 首页
 <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
 {% endfor %}
 </ul>
+
+## 独立文章
+
+<ul>
+{% assign essay_posts = site.categories["essay"] | sort: "title" %}
+{% for post in essay_posts %}
+<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
