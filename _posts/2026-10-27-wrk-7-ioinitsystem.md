@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 7 批：IoInitSystem 与驱动加载潮"
 categories: WRK
+series_order: 8
 ---
 
 取材说明：底本是 WRK 树（Windows Server 2003 SP1（WS03 SP1）代码线）`BASE/NTOS/` 下的 `IO/IOMGR/IOINIT.C`、`IO/IOMGR/INTERNAL.C`、`MM/SYSLOAD.C`、`CONFIG/CMSYSINI.C`、`CONFIG/CMBOOT.C`；ntldr、HAL 本体不在树内（见第 0 批）。**本批有一条树内边界，必须先说清**：`IO/PNPMGR/` 目录下只有头文件，没有 `.C` 文件，因此 `IopInitializeBootDrivers`、`IopInitializeSystemDrivers`、`IopInitializePlugPlayServices`、`PpInitSystem`、`PpLastGoodDoBootProcessing`、`IopDriverLoadingFailed`、`IopPnpDriverStarted` 这七个函数的本体都不在树内——本批只能钉死它们的调用点、入参与失败码，波内细节列入未钉死清单，不编造。另纠路线原话一处：路线写“`MmLoadSystemImage` 装映像 → `IopInitializeDriverModule` → `DriverEntry`”，但树内**没有名为 `IopInitializeDriverModule` 的函数**，对应环节的实名是 `IopLoadDriver`（`IO/IOMGR/INTERNAL.C:3689`），下文一律用实名。

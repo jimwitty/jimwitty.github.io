@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 3 批：MmInitSystem 三阶段——内存管理器上线"
 categories: WRK
+series_order: 4
 ---
 
 > **取材说明**：底本为 WRK 源码树 `~/workspace/WRK/WRK/WRK-V1.2`（WS03 SP1 / NT 5.2 代码线）中 `BASE/NTOS` 的实现，主文件 `MM/MMINIT.C`（`MmInitSystem` 定义在 `:337`，Phase 分支在 `:433` / `:2211` / `:2391`）、`MM/I386/INIT386.C`（`MiInitMachineDependent` 定义在 `:763`）、`MM/SECTSUP.C`（`MiSectionInitialization` 定义在 `:958`）、`MM/SYSLOAD.C`（`MiWriteProtectSystemImage` 定义在 `:6689`）。HAL 本体不在 WRK 包内，凡涉 HAL 处均按调用点反读并注明；tpn/pdfs 是第三方文档收集仓库、非微软官方，本批不依赖它。

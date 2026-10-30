@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 0 批 · 加载链地图与源码树导航"
 categories: WRK
+series_order: 1
 ---
 
 > 底本：本地 WRK V1.2 源码（WS03 SP1 代码线，NT 5.2），根目录 `~/workspace/WRK/WRK/WRK-V1.2/BASE/NTOS/`。

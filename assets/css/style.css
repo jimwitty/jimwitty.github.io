@@ -102,3 +102,5 @@ pre code { background: transparent; padding: 0; font-size: 13.5px; }
   .sidebar { position: static; flex: none; width: 100%; }
   .content { font-size: 16px; }
 }
+
+.series-nav + .series-nav { margin-top: 26px; }

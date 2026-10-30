@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 6 批：CmInitSystem 与注册表点火"
 categories: WRK
+series_order: 7
 ---
 
 ## 本批在点火链中的位置

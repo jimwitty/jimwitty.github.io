@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 2 批：ExpInitializeExecutive 点火总控（Phase 0 / Phase 1）"
 categories: WRK
+series_order: 3
 ---
 
 > **取材说明**：底本为 WRK 源码树 `~/workspace/WRK/WRK/WRK-V1.2`（WS03 SP1 / NT 5.2 代码线）中 `BASE/NTOS/INIT/INITOS.C`（2105 行）全文通读；对位子系统只读到"总控级"（调用顺序与依赖关系），各子系统内部展开留给第 3–7 批。HAL 本体不在 WRK 包内（只有预编译 DLL），凡涉 HAL 内部处均按调用点反读并注明。tpn/pdfs 是第三方文档收集仓库、非微软官方；本批不依赖它。

@@ -18,8 +18,17 @@
     <nav class="series-nav">
       <div class="series-title">WRK 源码学习系列</div>
       <ul>
-        {% assign wrk_posts = site.categories.WRK | sort: "title" %}
+        {% assign wrk_posts = site.categories.WRK | sort: "series_order" %}
         {% for post in wrk_posts %}
+        <li><a href="{{ post.url | relative_url }}"{% if post.url == page.url %} class="active"{% endif %}>{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+    <nav class="series-nav">
+      <div class="series-title">Win 内核驱动学习系列</div>
+      <ul>
+        {% assign wk_posts = site.categories["windows-kernel"] | sort: "series_order" %}
+        {% for post in wk_posts %}
         <li><a href="{{ post.url | relative_url }}"{% if post.url == page.url %} class="active"{% endif %}>{{ post.title }}</a></li>
         {% endfor %}
       </ul>

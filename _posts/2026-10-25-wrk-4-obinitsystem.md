@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 4 批：对象与句柄基础设施点火 — ObInitSystem"
 categories: WRK
+series_order: 5
 ---
 
 > 取材说明：本批以 WRK 源码（WS03 SP1 代码线，`BASE/NTOS/`）为底本，主线是 `OB/OBINIT.C` 的 `ObInitSystem`，辅以 `OB/OBTYPE.C`（类型注册）、`OB/OBCREATE.C`（对象分配）、`OB/OBDIR.C`（目录与哈希）、`OB/OBHANDLE.C`（句柄）、`OB/OBSDATA.C`（安全描述符缓存）、`EX/HANDLE.C`（句柄表）、`SE/SEINIT.C` 与 `SE/TOKEN.C`（第四类 Token）。对位资料：Design Notes 合集 #24《Object Management》精读（规范—实现对子）、Probert《Object Manager》讲精读（四层模型与句柄表三级结构）。ntldr、win32k 本体不在 WRK 树内，本批不涉及。

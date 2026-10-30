@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 5 批：进程、线程与调度器点火"
 categories: WRK
+series_order: 6
 ---
 
 > **取材说明**：底本为 WRK 源码树 `~/workspace/WRK/WRK/WRK-V1.2`（`WS03 SP1` / `NT 5.2` 代码线）中 `BASE/NTOS` 的进程与内核调度部分；HAL 本体不在 WRK 包内（只有预编译 `DLL` 与 `PDB`），凡涉 HAL 内部实现处均按调用点反读处理并注明；Probert 课程中 Processes 与 Threads、Thread Scheduling 两讲不在 tpn 收录的四讲之内，本批不假装有讲义对位，只用源码补；tpn/pdfs 是第三方文档收集仓库、非微软官方，本批不依赖它。

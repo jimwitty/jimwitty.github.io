@@ -3,10 +3,13 @@ layout: default
 ---
 <article class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <div class="post-meta">{{ page.date | date: "%Y-%m-%d" }} · WRK 源码学习系列</div>
+  {% assign cat = page.categories | first %}
+  {% if cat == "WRK" %}{% assign series_label = "WRK 源码学习系列" %}
+  {% elsif cat == "windows-kernel" %}{% assign series_label = "Win 内核驱动学习系列" %}{% endif %}
+  <div class="post-meta">{{ page.date | date: "%Y-%m-%d" }}{% if series_label %} · {{ series_label }}{% endif %}</div>
   {{ content }}
 </article>
-{% assign series = site.categories.WRK | sort: "title" %}
+{% assign series = site.categories[cat] | sort: "series_order" %}
 {% for p in series %}
   {% if p.url == page.url %}{% assign cur = forloop.index0 %}{% endif %}
 {% endfor %}

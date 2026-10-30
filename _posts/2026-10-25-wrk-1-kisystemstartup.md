@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 1 批：KiSystemStartup 与处理器点火"
 categories: WRK
+series_order: 2
 ---
 
 > **取材说明**：底本为 WRK 源码树 `~/workspace/WRK/WRK/WRK-V1.2`（WS03 SP1 / NT 5.2 代码线）中 `BASE/NTOS` 的 i386 与 AMD64 两套实现；HAL 本体不在 WRK 包内（只有三份预编译 HAL 的 DLL+PDB），凡涉 HAL 内部实现处均按"调用点反读"处理并注明；设计文档对位 `NTDESIGNWORKBOOK` 的 STARTUP.DOC（仅"三阶段初始化 + 执行体拉起 SM（会话管理器，即 SMSS）"骨架存活）。tpn/pdfs 是第三方文档收集仓库、非微软官方；本批不依赖它。

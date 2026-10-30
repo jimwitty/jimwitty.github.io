@@ -2,6 +2,7 @@
 layout: post
 title: "WRK 第 8 批：从内核到用户世界——会话、Win32k 加载与第一个用户进程"
 categories: WRK
+series_order: 9
 ---
 
 取材说明：底本是 WRK 树（Windows Server 2003 SP1 代码线）`BASE/NTOS/` 下的 `INIT/INITOS.C`（Phase 1 尾）、`RTL/RTLEXEC.C`（`RtlCreateUserProcess`）、`PS/CREATE.C`（`PspCreateProcess` / `PspCreateThread` / `PspUserThreadStartup`）、`PS/PSQUERY.C`（`PsEstablishWin32Callouts` / `PsConvertToGuiThread`）、`PS/PSDELETE.C`（退出侧 callout）、`EX/SYSINFO.C`（会话映像装载入口）、`INC/PS.H`（callout 表结构）。**本批的边界比前几批更重要，先画清**：win32k.sys 本体、CSRSS、SMSS 的用户态代码都不在 WRK 树内——本批只读内核对接面（callout 表、转换函数、会话映像装载入口、进程创建链），用户态一侧（SMSS 如何建 CSRSS、CSRSS 如何触发 win32k 加载、Winlogon 登录流程）只做到架构级陈述，列入未钉死清单，不编造。
