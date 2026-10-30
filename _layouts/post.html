@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<article class="post">
+  <h1 class="post-title">{{ page.title }}</h1>
+  <div class="post-meta">{{ page.date | date: "%Y-%m-%d" }} · WRK 源码学习系列</div>
+  {{ content }}
+</article>
+{% assign series = site.categories.WRK | sort: "title" %}
+{% for p in series %}
+  {% if p.url == page.url %}{% assign cur = forloop.index0 %}{% endif %}
+{% endfor %}
+{% assign prev_i = cur | minus: 1 %}
+{% assign next_i = cur | plus: 1 %}
+<nav class="post-nav">
+  <span>{% if cur > 0 %}{% assign prev_post = series[prev_i] %}<a href="{{ prev_post.url | relative_url }}">← {{ prev_post.title }}</a>{% endif %}</span>
+  <span>{% if next_i < series.size %}{% assign next_post = series[next_i] %}<a href="{{ next_post.url | relative_url }}">{{ next_post.title }} →</a>{% endif %}</span>
+</nav>

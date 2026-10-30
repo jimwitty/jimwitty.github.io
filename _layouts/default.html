@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% if page.title and page.title != "首页" %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+<link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
+</head>
+<body>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="site-title" href="{{ "/" | relative_url }}">{{ site.title }}</a>
+    <span class="site-tagline">技术学习笔记</span>
+  </div>
+</header>
+<div class="wrap layout">
+  <aside class="sidebar">
+    <nav class="series-nav">
+      <div class="series-title">WRK 源码学习系列</div>
+      <ul>
+        {% assign wrk_posts = site.categories.WRK | sort: "title" %}
+        {% for post in wrk_posts %}
+        <li><a href="{{ post.url | relative_url }}"{% if post.url == page.url %} class="active"{% endif %}>{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </nav>
+  </aside>
+  <main class="content">
+    {{ content }}
+  </main>
+</div>
+<footer class="site-footer">
+  <div class="wrap">Hosted on GitHub Pages</div>
+</footer>
+</body>
+</html>
