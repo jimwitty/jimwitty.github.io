@@ -29,10 +29,21 @@ title: 首页
 {% endfor %}
 </ul>
 
+## Uninformed 全译系列
+
+Uninformed 期刊（uninformed.org）经典论文的中文全译：PatchGuard 三部曲（第 3 / 6 / 8 卷）与 FUTo（第 3 卷），共 4 篇，按系列顺序排列。
+
+<ul>
+{% assign uninf_posts = site.posts | where: "series", "uninformed" | sort: "series_order" %}
+{% for post in uninf_posts %}
+<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
 ## 独立文章
 
 <ul>
-{% assign essay_posts = site.categories["essay"] | sort: "title" %}
+{% assign essay_posts = site.categories["essay"] | where_exp: "post", "post.series != 'uninformed'" | sort: "title" %}
 {% for post in essay_posts %}
 <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
 {% endfor %}

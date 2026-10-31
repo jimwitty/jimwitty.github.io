@@ -2,6 +2,8 @@
 layout: post
 title: "Subverting PatchGuard Version 2 中文全译（Uninformed 第 6 卷，Skywing，2006）"
 categories: essay
+series: uninformed
+series_order: 2
 ---
 
 > 整理自 Uninformed 第 6 卷（2006 年 12 月）Skywing（Ken Johnson）的《Subverting PatchGuard Version 2》全文翻译——第 2 版的防拆强化、九条绕过路线，以及把完整性检查例程本身策反的完整演示，亦是《PatchGuard 攻防史》的事实底座之一（在该文中亦作附录三收录）。三部曲顺序：其一《Bypassing PatchGuard on Windows x64》→ 其二（本文，第 2 版）→ 其三《PatchGuard Reloaded》（第 3 版）。原文：http://www.uninformed.org/?v=6&a=1&t=txt

@@ -2,6 +2,8 @@
 layout: post
 title: "Bypassing PatchGuard on Windows x64 中文全译（Uninformed 第 3 卷，skape & Skywing，2005）"
 categories: essay
+series: uninformed
+series_order: 1
 ---
 
 > 整理自 Uninformed 第 3 卷（2005 年 12 月 1 日）skape（Matt Miller）与 Skywing（Ken Johnson）的《Bypassing PatchGuard on Windows x64》全文翻译——第一份把 PatchGuard 的上下文结构、校验清单完整逆向出来的公开文献，也是《PatchGuard 攻防史》的事实底座之一（在该文中亦作附录二收录）。三部曲顺序：其一（本文，第 1 版）→ 其二《Subverting PatchGuard Version 2》→ 其三《PatchGuard Reloaded》（第 3 版）。原文：http://www.uninformed.org/?v=3&a=3&t=txt

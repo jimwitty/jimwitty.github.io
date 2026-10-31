@@ -2,6 +2,8 @@
 layout: post
 title: "PatchGuard Reloaded：PatchGuard 第 3 版简析 中文全译（Uninformed 第 8 卷，Skywing，2007）"
 categories: essay
+series: uninformed
+series_order: 3
 ---
 
 > 整理自 Uninformed 第 8 卷（2007 年 9 月）Skywing（Ken Johnson）的《PatchGuard Reloaded: A Brief Analysis of PatchGuard Version 3》全文翻译——第 3 版（随 Windows Server 2008 Beta 3 亮相、经 Windows Update 推向 Vista 与 Server 2003）的保护改进与新一轮绕过、反制讨论（在《PatchGuard 攻防史》中亦作附录四收录）。三部曲顺序：其一《Bypassing PatchGuard on Windows x64》→ 其二《Subverting PatchGuard Version 2》→ 其三（本文，第 3 版）。原文：http://www.uninformed.org/?v=8&a=5&t=txt

@@ -7,10 +7,17 @@ layout: default
   {% if cat == "WRK" %}{% assign series_label = "WRK 源码学习系列" %}
   {% elsif cat == "windows-kernel" %}{% assign series_label = "Win 内核驱动学习系列" %}
   {% elsif cat == "essay" %}{% assign series_label = "独立文章" %}{% endif %}
+  {% if page.series == "uninformed" %}{% assign series_label = "Uninformed 全译系列" %}{% endif %}
   <div class="post-meta">{{ page.date | date: "%Y-%m-%d" }}{% if series_label %} · {{ series_label }}{% endif %}</div>
   {{ content }}
 </article>
-{% assign series = site.categories[cat] | sort: "series_order" %}
+{% if page.series == "uninformed" %}
+  {% assign series = site.posts | where: "series", "uninformed" | sort: "series_order" %}
+{% elsif cat == "essay" %}
+  {% assign series = site.categories[cat] | where_exp: "p", "p.series != 'uninformed'" | sort: "series_order" %}
+{% else %}
+  {% assign series = site.categories[cat] | sort: "series_order" %}
+{% endif %}
 {% for p in series %}
   {% if p.url == page.url %}{% assign cur = forloop.index0 %}{% endif %}
 {% endfor %}
