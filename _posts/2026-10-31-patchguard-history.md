@@ -41,6 +41,8 @@ categories: essay
 
 **微软这一时期的反制节奏**——按 KPP 公开条目的概括：自 2005 年诞生后微软发布了**两次主要更新，每一次都专门设计来打掉上一版已知的绕过**；细节从不公布，只随版本（Vista SP1/Server 2008、Windows 7、Windows 8）整体更换实现：上下文档案与触发组合再洗牌、保护清单继续扩（后来 0x109 的类型表排到 win32k 整体与会话空间，就是这段时期持续扩编的化石记录）。
 
+**补注（2026-10-31 核 Uninformed 全集目录时补正）**：上述"第二次主要更新"有确切出处——Skywing 在 Uninformed 第 8 卷的《PatchGuard Reloaded: A Brief Analysis of PatchGuard Version 3》明确称之为 **PatchGuard 第 3 版**：随 Windows Server 2008 Beta 3 亮相，其后经 Windows Update 推向 Vista 与 Server 2003；该文同样给出了针对第 3 版的新一轮绕过思路与反制讨论。本文初稿整理时未核到该文，只按"两次主要更新"保守表述，特此补正——版本编号至此有据可查：1 版（2005）、2 版（Vista 世代）、3 版（Server 2008 世代）；此后各 Windows 版本虽持续重做，公开文献未再见公认的统一编号，故本文对 Windows 7 之后仍以"逐版本重做"表述。
+
 **2012 年，战线外扩的信号**：Windows 8 与 UEFI Secure Boot 同代登场。Secure Boot 本身不是 PatchGuard 的一部分，但它标志着微软的思路变化：**既然运行时的同级对抗没有终局，就把信任链往开机之前推**——固件先验启动管理器、启动管理器再验内核，"赶在 PatchGuard 布防之前动手"的门槛从这一代开始被系统性抬高。下一幕里攻击者对这条新防线的回应（EfiGuard 必须关 Secure Boot 才能工作），反过来证明了这步棋的分量。
 
 ## 第四幕（2013–2016）：野外实证与商品化
