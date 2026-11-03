@@ -40,6 +40,17 @@ Uninformed 期刊（uninformed.org）经典论文的中文全译：PatchGuard �
 {% endfor %}
 </ul>
 
+## 《新机器的灵魂》精读系列
+
+逐章精读 Tracy Kidder 的《The Soul of a New Machine》（1981）：Data General 一支年轻团队从零造出 Eclipse MV/8000 的全过程，普利策奖与美国国家图书奖双奖之作。严格按原书章节推进（序章 + 16 章 + 尾声），连载中。
+
+<ul>
+{% assign soul_posts = site.categories["新机器的灵魂"] | sort: "series_order" %}
+{% for post in soul_posts %}
+<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
 ## 独立文章
 
 <ul>
