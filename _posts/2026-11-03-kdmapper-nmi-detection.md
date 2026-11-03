@@ -1,4 +1,8 @@
 ---
+layout: post
+title: "Kdmapper 与无模块驱动检测讲透：PTE Walk、NMI 采样与 win32k 通信攻防"
+categories: essay
+---
 
 ## 一、先立靶子：什么是"无模块驱动"
 
@@ -799,4 +803,3 @@ main()
 [4] [原创]使用NMI中断检测无模块驱动-编程技术-看雪论坛（https://bbs.kanxue.com/thread-288576.htm）
 
 > （附录完。以上原文内容转载自先知社区，版权归原作者所有。）
-
