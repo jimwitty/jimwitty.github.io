@@ -51,6 +51,17 @@ Uninformed 期刊（uninformed.org）经典论文的中文全译：PatchGuard �
 {% endfor %}
 </ul>
 
+## 《帝国的叛逆者》精读系列
+
+逐章精读 Michael Drummond 的《Renegades of the Empire》（1999）：DirectX 三人组如何在没有许可证的情况下造出 DirectX、又如何带着 Project Chrome 一头撞向帝国的围墙。严格按原书章节推进（前言 + 19 章），连载中。
+
+<ul>
+{% assign renegades_posts = site.categories["帝国的叛逆者"] | sort: "series_order" %}
+{% for post in renegades_posts %}
+<li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+{% endfor %}
+</ul>
+
 ## 独立文章
 
 <ul>

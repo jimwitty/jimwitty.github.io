@@ -7,6 +7,7 @@ layout: default
   {% if cat == "WRK" %}{% assign series_label = "WRK 源码学习系列" %}
   {% elsif cat == "windows-kernel" %}{% assign series_label = "Win 内核驱动学习系列" %}
   {% elsif cat == "新机器的灵魂" %}{% assign series_label = "《新机器的灵魂》精读系列" %}
+  {% elsif cat == "帝国的叛逆者" %}{% assign series_label = "《帝国的叛逆者》精读系列" %}
   {% elsif cat == "essay" %}{% assign series_label = "独立文章" %}{% endif %}
   {% if page.series == "uninformed" %}{% assign series_label = "Uninformed 全译系列" %}{% endif %}
   <div class="post-meta">{{ page.date | date: "%Y-%m-%d" }}{% if series_label %} · {{ series_label }}{% endif %}</div>
